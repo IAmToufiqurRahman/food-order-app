@@ -6,14 +6,14 @@ import Card from '../UI/Card'
 const DUMMY_MEALS = [
   {
     id: 'm1',
-    name: 'Sushi',
-    description: 'Finest fish and veggies',
+    name: 'Kacchi Biriyani',
+    description: 'Finest Combo of Basmoti rice and mutton',
     price: 22.99
   },
   {
     id: 'm2',
-    name: 'Schnitzel',
-    description: 'A german specialty!',
+    name: 'Mustakim Chicken Chap',
+    description: 'A delicate art of kabab!',
     price: 16.5
   },
   {
@@ -31,7 +31,7 @@ const DUMMY_MEALS = [
 ]
 
 export default function AvailableMeals() {
-  const mealsList = DUMMY_MEALS.map(meal => <MealItem key={meal.id} name={meal.name} description={meal.description} price={meal.price} />)
+  const mealsList = DUMMY_MEALS.map(meal => <MealItem key={meal.id} id={meal.id} name={meal.name} description={meal.description} price={meal.price} />)
 
   return (
     <section className={classes.meals}>
