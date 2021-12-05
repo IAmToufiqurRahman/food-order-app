@@ -14,7 +14,7 @@ export default function MealItemForm(props) {
   const submitHandler = event => {
     event.preventDefault()
 
-    const enteredAmount = amountInputRef.current.value
+    const enteredAmount = amountInputRef.current.value // this value is always a string
     const enteredAmountNumber = +enteredAmount
 
     if (enteredAmount.trim().length === 0 || enteredAmountNumber < 1 || enteredAmountNumber > 20) {
@@ -39,7 +39,7 @@ export default function MealItemForm(props) {
           defaultValue: '1'
         }}
       />
-      {/* Two curly braces: one for embedding javascript expression and the other one is there because the value is object */}
+      {/* Two curly braces: one for embedding javascript expression and the other one is there because the value is expented to be an object passed as props */}
 
       <button
         disabled={clickCount > 20}

@@ -8,8 +8,6 @@ import classes from './MealItem.module.css'
 export default function MealItem(props) {
   const cartCtx = useContext(CartContext)
 
-  const price = `$${props.price.toFixed(2)}`
-
   const addToCartHandler = amount => {
     cartCtx.addItem({
       id: props.id,
@@ -18,6 +16,8 @@ export default function MealItem(props) {
       price: props.price
     })
   }
+
+  const price = `$${+props.price.toFixed(2)}`
 
   return (
     <li className={classes.meal}>
